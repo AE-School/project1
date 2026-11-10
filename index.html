@@ -41,7 +41,7 @@ function shuffled(n){const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j
 let order=QUESTIONS.map(q=>shuffled(q.opts.length));
 function L(i,orig){return LETTERS[order[i].indexOf(orig)];}
 // آدرس Worker را بعد از راه‌اندازی اینجا بگذار؛ مثال: 'https://quiz-results.نام-شما.workers.dev'
-const WORKER_URL='';
+const WORKER_URL='https://quiz-results.realempraptor.workers.dev/';
 function newId(){try{return crypto.randomUUID();}catch(e){return Array.from({length:32},()=>Math.floor(Math.random()*16).toString(16)).join('');}}
 let attemptId=newId();
 function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify({student,current,answers,order,attemptId}));}catch(e){}}
