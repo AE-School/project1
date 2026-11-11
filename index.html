@@ -32,14 +32,12 @@
 <footer class="footer">چهل سال ، چهل سوال · یادگیری، گفت‌وگو و پاسداشت حقیقت</footer>
 </main><div class="toast" id="toast" role="status"></div>
 <script>
-const QUESTIONS=[{"axis": 1, "q": "استعمار نو یا امپریالیسم در تعریف سیاسی، بیش از همه به چه معناست؟", "opts": ["گسترش نفوذ و سلطه بر ملت‌ها برای تأمین منافع قدرت مسلط", "همکاری برابر علمی میان کشورها", "تبادل فرهنگی داوطلبانه", "کمک‌رسانی بشردوستانه بدون شرط"], "ans": 0}, {"axis": 1, "q": "کودتای ۲۸ مرداد ۱۳۳۲ در کدام سال میلادی رخ داد؟", "opts": ["۱۹۴۱", "۱۹۵۳", "۱۹۶۷", "۱۹۷۹"], "ans": 1}, {"axis": 1, "q": "ملی‌شدن صنعت نفت ایران در دوره نخست‌وزیری کدام شخصیت به تصویب رسید؟", "opts": ["امیرکبیر", "محمدعلی فروغی", "محمد مصدق", "قوام‌السلطنه"], "ans": 2}, {"axis": 1, "q": "در ادبیات انقلاب اسلامی، «استقلال» در سیاست خارجی بر چه اصلی تأکید دارد؟", "opts": ["قطع ارتباط با همه کشورها", "پذیرش بی‌چون‌وچرای خواست قدرت‌های بزرگ", "ترجیح منافع بیگانگان بر منافع ملی", "تصمیم‌گیری مستقل و حفظ حق انتخاب ملت"], "ans": 3}, {"axis": 1, "q": "کدام گزینه نمونه‌ای از سلطه‌طلبی در روابط بین‌الملل است؟", "opts": ["تحمیل اراده سیاسی یا اقتصادی یک قدرت بر کشور دیگر", "گفت‌وگوی برابر بر پایه احترام متقابل", "همکاری علمی با توافق دوطرفه", "پایبندی به حق حاکمیت کشورها"], "ans": 0}, {"axis": 1, "q": "مفهوم «حق تعیین سرنوشت ملت‌ها» به چه معناست؟", "opts": ["واگذاری تصمیم‌های داخلی به دولت‌های خارجی", "انتخاب آزادانه مسیر سیاسی و اجتماعی به دست مردم هر کشور", "لغو همه قوانین ملی", "تبعیت همیشگی از یک قدرت جهانی"], "ans": 1}, {"axis": 1, "q": "در نگاه نقادانه به تحریم‌های یک‌جانبه، یکی از پیامدهای مورد بحث آن‌ها چیست؟", "opts": ["افزایش خودکار رفاه همه شهروندان", "حذف کامل نیاز به تجارت", "فشار بر اقتصاد و زندگی مردم عادی", "تضمین بی‌طرفی سیاسی"], "ans": 2}, {"axis": 1, "q": "کدام رفتار با اصل گفت‌وگوی برابر میان ملت‌ها سازگارتر است؟", "opts": ["تهدید طرف مقابل برای پذیرش خواسته‌ها", "نادیده‌گرفتن قوانین بین‌المللی", "تحمیل یک‌جانبه توافق", "شنیدن دیدگاه‌ها و احترام به حاکمیت طرفین"], "ans": 3}, {"axis": 1, "q": "برای سنجش ادعاهای سیاسی درباره یک رویداد تاریخی، کدام روش مناسب‌تر است؟", "opts": ["مقایسه منابع معتبر و تفکیک داده از تفسیر", "اتکا به یک پیام بی‌نام در شبکه اجتماعی", "پذیرش نخستین روایت شنیده‌شده", "نادیده‌گرفتن شواهد مخالف"], "ans": 0}, {"axis": 1, "q": "مقصود از «استکبارستیزی» در چارچوب استقلال‌خواهی چیست؟", "opts": ["خصومت با مردم همه کشورهای دیگر", "مخالفت با سلطه‌گری و دفاع از استقلال و عدالت", "رد هرگونه همکاری علمی", "کناره‌گیری از همه تعاملات جهانی"], "ans": 1}, {"axis": 2, "q": "عملیات رمضان در کدام مقطع از جنگ تحمیلی انجام شد؟", "opts": ["پیش از آغاز جنگ، در سال ۱۳۵۸", "پس از پذیرش قطعنامه ۵۹۸", "تابستان ۱۳۶۱، پس از آزادسازی خرمشهر", "در جریان جنگ جهانی دوم"], "ans": 2}, {"axis": 2, "q": "آزادسازی خرمشهر در تقویم رسمی ایران با کدام روز شناخته می‌شود؟", "opts": ["۲۲ بهمن ۱۳۵۷", "۳۱ شهریور ۱۳۵۹", "۱۲ فروردین ۱۳۵۸", "۳ خرداد ۱۳۶۱"], "ans": 3}, {"axis": 2, "q": "جنگ تحمیلی عراق علیه ایران حدوداً چه مدت به طول انجامید؟", "opts": ["هشت سال؛ از ۱۳۵۹ تا ۱۳۶۷", "یک سال", "دوازده سال", "کمتر از شش ماه"], "ans": 0}, {"axis": 2, "q": "عملیات رمضان از عملیات‌های کدام دوره تاریخی ایران بود؟", "opts": ["نهضت مشروطه", "دفاع مقدس هشت‌ساله", "جنگ جهانی اول", "دوران صفویه"], "ans": 1}, {"axis": 2, "q": "جنگی که در رسانه‌ها با عنوان «جنگ ۱۲روزه» شناخته شد، در چه ماهی از سال ۲۰۲۵ رخ داد؟", "opts": ["ژانویه", "مارس", "ژوئن", "نوامبر"], "ans": 2}, {"axis": 2, "q": "در یادبود شهدای جنگ ۱۲روزه، کدام رویکرد مسئولانه‌تر است؟", "opts": ["بازنشر شایعه برای جلب توجه", "انتشار تصاویر خصوصی بدون اجازه", "نسبت‌دادن آمار تأییدنشده به منابع رسمی", "استفاده از اطلاعات تأییدشده و حفظ حرمت خانواده‌ها"], "ans": 3}, {"axis": 2, "q": "مدرسه «شجره طیبه» میناب در حافظه جمعی با یاد چه کسانی گرامی داشته می‌شود؟", "opts": ["دانش‌آموزان و آموزگاران قربانی حمله به مدرسه", "کاوشگران قطب جنوب", "ورزشکاران المپیکی", "نویسندگان دوره قاجار"], "ans": 0}, {"axis": 2, "q": "برای پاسداشت یاد شهدای میناب، کدام اقدام مناسب‌تر است؟", "opts": ["انتشار نام و تصویر افراد بدون بررسی", "بزرگداشت قربانیان با راستی‌آزمایی، احترام و همدلی", "ساختن جزئیات تأییدنشده", "تبدیل سوگواری به رقابت سیاسی"], "ans": 1}, {"axis": 2, "q": "چرا ثبت خاطرات و روایت‌های مستند رزمندگان و خانواده شهدا اهمیت دارد؟", "opts": ["برای جایگزین‌کردن همه اسناد تاریخی", "برای جلوگیری از هرگونه پژوهش تازه", "برای انتقال تجربه و حفظ حافظه تاریخی نسل‌ها", "برای ساده‌سازی تاریخ به یک روایت بی‌منبع"], "ans": 2}, {"axis": 2, "q": "کدام عبارت درباره بزرگداشت شهدا و قربانیان جنگ دقیق‌تر است؟", "opts": ["باید فقط به آمارهای شبکه‌های اجتماعی تکیه کرد", "یادبود فقط برای افراد مشهور است", "پرسشگری تاریخی بی‌احترامی است", "یادبود با حقیقت‌جویی، کرامت انسانی و همدلی همراه است"], "ans": 3}, {"axis": 3, "q": "نیروگاه اتمی بوشهر در کدام حوزه فناوری قرار می‌گیرد؟", "opts": ["تولید برق با انرژی هسته‌ای", "ساخت موتور هواپیما", "تصفیه آب دریا با انرژی بادی", "تولید برق زمین‌گرمایی"], "ans": 0}, {"axis": 3, "q": "نام نخستین ماهواره بومی ایران که در سال ۱۳۸۷ (۲۰۰۹) به مدار پرتاب شد چه بود؟", "opts": ["ناهید", "امید", "خیام", "پارس"], "ans": 1}, {"axis": 3, "q": "فناوری نانو به مطالعه و مهندسی مواد در چه مقیاسی می‌پردازد؟", "opts": ["مقیاس قاره‌ای", "مقیاس کیهانی", "مقیاس بسیار کوچکِ اتم‌ها و مولکول‌ها", "فقط مقیاس ساختمان‌ها"], "ans": 2}, {"axis": 3, "q": "یکی از کاربردهای سلول‌های بنیادی در پزشکی چیست؟", "opts": ["تولید سوخت خودرو", "پیش‌بینی قطعی زلزله", "جایگزینی همه داروها", "پژوهش درباره بازسازی و ترمیم بافت‌ها"], "ans": 3}, {"axis": 3, "q": "ایزوتوپ‌های پرتوزا در پزشکی هسته‌ای چه کاربردی دارند؟", "opts": ["کمک به تصویربرداری تشخیصی یا درمان برخی بیماری‌ها", "افزایش سرعت اینترنت", "ساخت قطعات رایانه", "تولید اکسیژن در خودرو"], "ans": 0}, {"axis": 3, "q": "ماهواره‌های سنجش از دور چه کمکی می‌توانند بکنند؟", "opts": ["تولید مستقیم دارو در بدن", "گردآوری داده از زمین برای پایش کشاورزی، منابع و محیط‌زیست", "جایگزینی همه ایستگاه‌های هواشناسی زمینی", "تعیین نظر مردم در انتخابات"], "ans": 1}, {"axis": 3, "q": "کدام گزینه نمونه‌ای از کاربرد زیست‌فناوری است؟", "opts": ["طراحی پل فلزی", "ساخت تلسکوپ نوری", "تولید برخی داروها و واکسن‌ها با کمک فرایندهای زیستی", "اندازه‌گیری فاصله با خط‌کش"], "ans": 2}, {"axis": 3, "q": "شرکت دانش‌بنیان معمولاً بر چه چیزی تکیه دارد؟", "opts": ["فروش کالاهای بدون نوآوری", "فقط واردات محصول آماده", "حذف پژوهش از تولید", "دانش تخصصی و تبدیل نوآوری به محصول یا خدمت"], "ans": 3}, {"axis": 3, "q": "در یک سامانه خورشیدی، پنل فتوولتائیک چه کاری انجام می‌دهد؟", "opts": ["تبدیل بخشی از نور خورشید به برق", "تبدیل صدا به سوخت", "تصفیه آب با فیلتر کاغذی", "ذخیره باد در مخزن"], "ans": 0}, {"axis": 3, "q": "هوش مصنوعی در تحلیل داده‌ها معمولاً چه قابلیتی فراهم می‌کند؟", "opts": ["تضمین پاسخ درست در همه شرایط", "یافتن الگوها و کمک به پیش‌بینی یا تصمیم‌سازی", "حذف نیاز به داده", "بی‌نیازکردن پژوهشگر از ارزیابی نتایج"], "ans": 1}, {"axis": 3, "q": "کدام نمونه، فناوری ارتباطی را نشان می‌دهد؟", "opts": ["تولید کود آلی", "کشت بافت گیاهی", "ارسال داده از راه شبکه‌های مخابراتی", "بازیافت شیشه"], "ans": 2}, {"axis": 3, "q": "در طراحی ربات، حسگرها چه نقشی دارند؟", "opts": ["تأمین غذای ربات", "جایگزینی همه نرم‌افزارها", "تبدیل هر ربات به انسان", "دریافت اطلاعات از محیط برای هدایت عملکرد"], "ans": 3}, {"axis": 3, "q": "کدام گزینه یک منبع انرژی تجدیدپذیر است؟", "opts": ["انرژی باد", "زغال‌سنگ", "نفت خام", "گاز طبیعی"], "ans": 0}, {"axis": 3, "q": "رعایت اخلاق پژوهش شامل کدام مورد است؟", "opts": ["حذف نتایج ناسازگار", "گزارش صادقانه روش و یافته‌ها و ذکر منابع", "کپی‌کردن بدون ارجاع", "ساختن داده برای تأیید فرضیه"], "ans": 1}, {"axis": 3, "q": "در مدار الکترونیکی، نیمه‌رساناها به‌ویژه در ساخت چه قطعه‌ای اهمیت دارند؟", "opts": ["توربین بادی", "لوله آزمایش", "تراشه‌ها و ترانزیستورها", "سلول خورشیدی طبیعی"], "ans": 2}, {"axis": 4, "q": "پیامی در شبکه اجتماعی ادعا می‌کند یک تصویر، رویدادی مهم را نشان می‌دهد. پیش از بازنشر چه کار می‌کنی؟", "opts": ["تصویر را فقط به‌خاطر تعداد بازدیدهای زیاد معتبر می‌دانم", "منبع نخستین انتشار، زمان و مکان ادعاشده را با منابع مستقل بررسی می‌کنم", "اگر دوستان فرستاده‌اند، آن را بدون بررسی بازنشر می‌کنم", "به توضیح کوتاه کنار تصویر بسنده می‌کنم"], "ans": 1}, {"axis": 4, "q": "یک اینفلوئنسر محصولی را بسیار تحسین می‌کند، اما درباره رابطه مالی‌اش با برند چیزی نمی‌گوید. کدام پرسش رسانه‌ای مهم‌تر است؟", "opts": ["آیا محتوا تبلیغ است و چه شواهد مستقلی برای ادعاهای محصول وجود دارد؟", "چند نفر زیر پست شکلک گذاشته‌اند؟", "آیا ویدئو موسیقی جذابی دارد؟", "آیا محصول در عکس پررنگ دیده می‌شود؟"], "ans": 0}, {"axis": 4, "q": "اگر سامانهٔ پیشنهاددهنده مرتب محتوای مشابه سلیقهٔ تو نشان دهد، برای شناخت دیدگاه‌های دیگر چه راهی بهتر است؟", "opts": ["فقط همان محتواها را دنبال کنم تا مطمئن‌تر شوم", "فرض کنم هرچه بیشتر نمایش داده می‌شود حتماً درست است", "آگاهانه منابع معتبر و متنوع با دیدگاه‌های متفاوت را هم بررسی کنم", "همهٔ خبرها را بدون خواندن بازنشر کنم"], "ans": 2}, {"axis": 4, "q": "تیتر خبری بسیار خشم‌برانگیز است و از تو می‌خواهد فوراً آن را برای همه بفرستی. بهترین واکنش چیست؟", "opts": ["بازنشر فوری، چون خبر فوری نباید منتظر بماند", "قضاوت بر اساس تیتر، بدون دیدن متن", "توجه به خشم خود و فرستادن پیام برای دوستان", "مکث کنم، متن و تاریخ را بخوانم و ادعا را در منابع مستقل بسنجیم"], "ans": 3}, {"axis": 4, "q": "دو پست درباره یک رویداد، آمارهای متفاوتی نقل می‌کنند. برای بررسی منصفانه کدام کار سودمندتر است؟", "opts": ["ردیابی آمار تا منبع اصلی، بررسی روش و تاریخ آن و مقایسه با منابع معتبر دیگر", "انتخاب عددی که با نظر قبلی‌ام سازگار است", "باورکردن پستی که طراحی زیباتری دارد", "میانگین‌گرفتن از دو عدد بدون بررسی منبع"], "ans": 0}];
+const QUESTIONS=[{"axis": 1, "q": "استعمار نو یا امپریالیسم در تعریف سیاسی، بیش از همه به چه معناست؟", "opts": ["گسترش نفوذ و سلطه بر ملت‌ها برای تأمین منافع قدرت مسلط", "همکاری برابر علمی میان کشورها", "تبادل فرهنگی داوطلبانه", "کمک‌رسانی بشردوستانه بدون شرط"]}, {"axis": 1, "q": "کودتای ۲۸ مرداد ۱۳۳۲ در کدام سال میلادی رخ داد؟", "opts": ["۱۹۴۱", "۱۹۵۳", "۱۹۶۷", "۱۹۷۹"]}, {"axis": 1, "q": "ملی‌شدن صنعت نفت ایران در دوره نخست‌وزیری کدام شخصیت به تصویب رسید؟", "opts": ["امیرکبیر", "محمدعلی فروغی", "محمد مصدق", "قوام‌السلطنه"]}, {"axis": 1, "q": "در ادبیات انقلاب اسلامی، «استقلال» در سیاست خارجی بر چه اصلی تأکید دارد؟", "opts": ["قطع ارتباط با همه کشورها", "پذیرش بی‌چون‌وچرای خواست قدرت‌های بزرگ", "ترجیح منافع بیگانگان بر منافع ملی", "تصمیم‌گیری مستقل و حفظ حق انتخاب ملت"]}, {"axis": 1, "q": "کدام گزینه نمونه‌ای از سلطه‌طلبی در روابط بین‌الملل است؟", "opts": ["تحمیل اراده سیاسی یا اقتصادی یک قدرت بر کشور دیگر", "گفت‌وگوی برابر بر پایه احترام متقابل", "همکاری علمی با توافق دوطرفه", "پایبندی به حق حاکمیت کشورها"]}, {"axis": 1, "q": "مفهوم «حق تعیین سرنوشت ملت‌ها» به چه معناست؟", "opts": ["واگذاری تصمیم‌های داخلی به دولت‌های خارجی", "انتخاب آزادانه مسیر سیاسی و اجتماعی به دست مردم هر کشور", "لغو همه قوانین ملی", "تبعیت همیشگی از یک قدرت جهانی"]}, {"axis": 1, "q": "در نگاه نقادانه به تحریم‌های یک‌جانبه، یکی از پیامدهای مورد بحث آن‌ها چیست؟", "opts": ["افزایش خودکار رفاه همه شهروندان", "حذف کامل نیاز به تجارت", "فشار بر اقتصاد و زندگی مردم عادی", "تضمین بی‌طرفی سیاسی"]}, {"axis": 1, "q": "کدام رفتار با اصل گفت‌وگوی برابر میان ملت‌ها سازگارتر است؟", "opts": ["تهدید طرف مقابل برای پذیرش خواسته‌ها", "نادیده‌گرفتن قوانین بین‌المللی", "تحمیل یک‌جانبه توافق", "شنیدن دیدگاه‌ها و احترام به حاکمیت طرفین"]}, {"axis": 1, "q": "برای سنجش ادعاهای سیاسی درباره یک رویداد تاریخی، کدام روش مناسب‌تر است؟", "opts": ["مقایسه منابع معتبر و تفکیک داده از تفسیر", "اتکا به یک پیام بی‌نام در شبکه اجتماعی", "پذیرش نخستین روایت شنیده‌شده", "نادیده‌گرفتن شواهد مخالف"]}, {"axis": 1, "q": "مقصود از «استکبارستیزی» در چارچوب استقلال‌خواهی چیست؟", "opts": ["خصومت با مردم همه کشورهای دیگر", "مخالفت با سلطه‌گری و دفاع از استقلال و عدالت", "رد هرگونه همکاری علمی", "کناره‌گیری از همه تعاملات جهانی"]}, {"axis": 2, "q": "عملیات رمضان در کدام مقطع از جنگ تحمیلی انجام شد؟", "opts": ["پیش از آغاز جنگ، در سال ۱۳۵۸", "پس از پذیرش قطعنامه ۵۹۸", "تابستان ۱۳۶۱، پس از آزادسازی خرمشهر", "در جریان جنگ جهانی دوم"]}, {"axis": 2, "q": "آزادسازی خرمشهر در تقویم رسمی ایران با کدام روز شناخته می‌شود؟", "opts": ["۲۲ بهمن ۱۳۵۷", "۳۱ شهریور ۱۳۵۹", "۱۲ فروردین ۱۳۵۸", "۳ خرداد ۱۳۶۱"]}, {"axis": 2, "q": "جنگ تحمیلی عراق علیه ایران حدوداً چه مدت به طول انجامید؟", "opts": ["هشت سال؛ از ۱۳۵۹ تا ۱۳۶۷", "یک سال", "دوازده سال", "کمتر از شش ماه"]}, {"axis": 2, "q": "عملیات رمضان از عملیات‌های کدام دوره تاریخی ایران بود؟", "opts": ["نهضت مشروطه", "دفاع مقدس هشت‌ساله", "جنگ جهانی اول", "دوران صفویه"]}, {"axis": 2, "q": "جنگی که در رسانه‌ها با عنوان «جنگ ۱۲روزه» شناخته شد، در چه ماهی از سال ۲۰۲۵ رخ داد؟", "opts": ["ژانویه", "مارس", "ژوئن", "نوامبر"]}, {"axis": 2, "q": "در یادبود شهدای جنگ ۱۲روزه، کدام رویکرد مسئولانه‌تر است؟", "opts": ["بازنشر شایعه برای جلب توجه", "انتشار تصاویر خصوصی بدون اجازه", "نسبت‌دادن آمار تأییدنشده به منابع رسمی", "استفاده از اطلاعات تأییدشده و حفظ حرمت خانواده‌ها"]}, {"axis": 2, "q": "مدرسه «شجره طیبه» میناب در حافظه جمعی با یاد چه کسانی گرامی داشته می‌شود؟", "opts": ["دانش‌آموزان و آموزگاران قربانی حمله به مدرسه", "کاوشگران قطب جنوب", "ورزشکاران المپیکی", "نویسندگان دوره قاجار"]}, {"axis": 2, "q": "برای پاسداشت یاد شهدای میناب، کدام اقدام مناسب‌تر است؟", "opts": ["انتشار نام و تصویر افراد بدون بررسی", "بزرگداشت قربانیان با راستی‌آزمایی، احترام و همدلی", "ساختن جزئیات تأییدنشده", "تبدیل سوگواری به رقابت سیاسی"]}, {"axis": 2, "q": "چرا ثبت خاطرات و روایت‌های مستند رزمندگان و خانواده شهدا اهمیت دارد؟", "opts": ["برای جایگزین‌کردن همه اسناد تاریخی", "برای جلوگیری از هرگونه پژوهش تازه", "برای انتقال تجربه و حفظ حافظه تاریخی نسل‌ها", "برای ساده‌سازی تاریخ به یک روایت بی‌منبع"]}, {"axis": 2, "q": "کدام عبارت درباره بزرگداشت شهدا و قربانیان جنگ دقیق‌تر است؟", "opts": ["باید فقط به آمارهای شبکه‌های اجتماعی تکیه کرد", "یادبود فقط برای افراد مشهور است", "پرسشگری تاریخی بی‌احترامی است", "یادبود با حقیقت‌جویی، کرامت انسانی و همدلی همراه است"]}, {"axis": 3, "q": "نیروگاه اتمی بوشهر در کدام حوزه فناوری قرار می‌گیرد؟", "opts": ["تولید برق با انرژی هسته‌ای", "ساخت موتور هواپیما", "تصفیه آب دریا با انرژی بادی", "تولید برق زمین‌گرمایی"]}, {"axis": 3, "q": "نام نخستین ماهواره بومی ایران که در سال ۱۳۸۷ (۲۰۰۹) به مدار پرتاب شد چه بود؟", "opts": ["ناهید", "امید", "خیام", "پارس"]}, {"axis": 3, "q": "فناوری نانو به مطالعه و مهندسی مواد در چه مقیاسی می‌پردازد؟", "opts": ["مقیاس قاره‌ای", "مقیاس کیهانی", "مقیاس بسیار کوچکِ اتم‌ها و مولکول‌ها", "فقط مقیاس ساختمان‌ها"]}, {"axis": 3, "q": "یکی از کاربردهای سلول‌های بنیادی در پزشکی چیست؟", "opts": ["تولید سوخت خودرو", "پیش‌بینی قطعی زلزله", "جایگزینی همه داروها", "پژوهش درباره بازسازی و ترمیم بافت‌ها"]}, {"axis": 3, "q": "ایزوتوپ‌های پرتوزا در پزشکی هسته‌ای چه کاربردی دارند؟", "opts": ["کمک به تصویربرداری تشخیصی یا درمان برخی بیماری‌ها", "افزایش سرعت اینترنت", "ساخت قطعات رایانه", "تولید اکسیژن در خودرو"]}, {"axis": 3, "q": "ماهواره‌های سنجش از دور چه کمکی می‌توانند بکنند؟", "opts": ["تولید مستقیم دارو در بدن", "گردآوری داده از زمین برای پایش کشاورزی، منابع و محیط‌زیست", "جایگزینی همه ایستگاه‌های هواشناسی زمینی", "تعیین نظر مردم در انتخابات"]}, {"axis": 3, "q": "کدام گزینه نمونه‌ای از کاربرد زیست‌فناوری است؟", "opts": ["طراحی پل فلزی", "ساخت تلسکوپ نوری", "تولید برخی داروها و واکسن‌ها با کمک فرایندهای زیستی", "اندازه‌گیری فاصله با خط‌کش"]}, {"axis": 3, "q": "شرکت دانش‌بنیان معمولاً بر چه چیزی تکیه دارد؟", "opts": ["فروش کالاهای بدون نوآوری", "فقط واردات محصول آماده", "حذف پژوهش از تولید", "دانش تخصصی و تبدیل نوآوری به محصول یا خدمت"]}, {"axis": 3, "q": "در یک سامانه خورشیدی، پنل فتوولتائیک چه کاری انجام می‌دهد؟", "opts": ["تبدیل بخشی از نور خورشید به برق", "تبدیل صدا به سوخت", "تصفیه آب با فیلتر کاغذی", "ذخیره باد در مخزن"]}, {"axis": 3, "q": "هوش مصنوعی در تحلیل داده‌ها معمولاً چه قابلیتی فراهم می‌کند؟", "opts": ["تضمین پاسخ درست در همه شرایط", "یافتن الگوها و کمک به پیش‌بینی یا تصمیم‌سازی", "حذف نیاز به داده", "بی‌نیازکردن پژوهشگر از ارزیابی نتایج"]}, {"axis": 3, "q": "کدام نمونه، فناوری ارتباطی را نشان می‌دهد؟", "opts": ["تولید کود آلی", "کشت بافت گیاهی", "ارسال داده از راه شبکه‌های مخابراتی", "بازیافت شیشه"]}, {"axis": 3, "q": "در طراحی ربات، حسگرها چه نقشی دارند؟", "opts": ["تأمین غذای ربات", "جایگزینی همه نرم‌افزارها", "تبدیل هر ربات به انسان", "دریافت اطلاعات از محیط برای هدایت عملکرد"]}, {"axis": 3, "q": "کدام گزینه یک منبع انرژی تجدیدپذیر است؟", "opts": ["انرژی باد", "زغال‌سنگ", "نفت خام", "گاز طبیعی"]}, {"axis": 3, "q": "رعایت اخلاق پژوهش شامل کدام مورد است؟", "opts": ["حذف نتایج ناسازگار", "گزارش صادقانه روش و یافته‌ها و ذکر منابع", "کپی‌کردن بدون ارجاع", "ساختن داده برای تأیید فرضیه"]}, {"axis": 3, "q": "در مدار الکترونیکی، نیمه‌رساناها به‌ویژه در ساخت چه قطعه‌ای اهمیت دارند؟", "opts": ["توربین بادی", "لوله آزمایش", "تراشه‌ها و ترانزیستورها", "سلول خورشیدی طبیعی"]}, {"axis": 4, "q": "پیامی در شبکه اجتماعی ادعا می‌کند یک تصویر، رویدادی مهم را نشان می‌دهد. پیش از بازنشر چه کار می‌کنی؟", "opts": ["تصویر را فقط به‌خاطر تعداد بازدیدهای زیاد معتبر می‌دانم", "منبع نخستین انتشار، زمان و مکان ادعاشده را با منابع مستقل بررسی می‌کنم", "اگر دوستان فرستاده‌اند، آن را بدون بررسی بازنشر می‌کنم", "به توضیح کوتاه کنار تصویر بسنده می‌کنم"]}, {"axis": 4, "q": "یک اینفلوئنسر محصولی را بسیار تحسین می‌کند، اما درباره رابطه مالی‌اش با برند چیزی نمی‌گوید. کدام پرسش رسانه‌ای مهم‌تر است؟", "opts": ["آیا محتوا تبلیغ است و چه شواهد مستقلی برای ادعاهای محصول وجود دارد؟", "چند نفر زیر پست شکلک گذاشته‌اند؟", "آیا ویدئو موسیقی جذابی دارد؟", "آیا محصول در عکس پررنگ دیده می‌شود؟"]}, {"axis": 4, "q": "اگر سامانهٔ پیشنهاددهنده مرتب محتوای مشابه سلیقهٔ تو نشان دهد، برای شناخت دیدگاه‌های دیگر چه راهی بهتر است؟", "opts": ["فقط همان محتواها را دنبال کنم تا مطمئن‌تر شوم", "فرض کنم هرچه بیشتر نمایش داده می‌شود حتماً درست است", "آگاهانه منابع معتبر و متنوع با دیدگاه‌های متفاوت را هم بررسی کنم", "همهٔ خبرها را بدون خواندن بازنشر کنم"]}, {"axis": 4, "q": "تیتر خبری بسیار خشم‌برانگیز است و از تو می‌خواهد فوراً آن را برای همه بفرستی. بهترین واکنش چیست؟", "opts": ["بازنشر فوری، چون خبر فوری نباید منتظر بماند", "قضاوت بر اساس تیتر، بدون دیدن متن", "توجه به خشم خود و فرستادن پیام برای دوستان", "مکث کنم، متن و تاریخ را بخوانم و ادعا را در منابع مستقل بسنجیم"]}, {"axis": 4, "q": "دو پست درباره یک رویداد، آمارهای متفاوتی نقل می‌کنند. برای بررسی منصفانه کدام کار سودمندتر است؟", "opts": ["ردیابی آمار تا منبع اصلی، بررسی روش و تاریخ آن و مقایسه با منابع معتبر دیگر", "انتخاب عددی که با نظر قبلی‌ام سازگار است", "باورکردن پستی که طراحی زیباتری دارد", "میانگین‌گرفتن از دو عدد بدون بررسی منبع"]}];
 const AXIS={1:'محور اول · استکبارستیزی',2:'محور دوم · یادمان شهدا و دفاع مقدس',3:'محور سوم · پیشرفت‌های علمی و فناوری',4:'محور چهارم · سواد رسانه‌ای'};
-const LETTERS=['الف','ب','ج','د'];
 let student='', current=0, answers=Array(QUESTIONS.length).fill(null);
 const STORE_KEY='basij-quiz-progress-v1';
 function shuffled(n){const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 let order=QUESTIONS.map(q=>shuffled(q.opts.length));
-function L(i,orig){return LETTERS[order[i].indexOf(orig)];}
 // آدرس Worker را بعد از راه‌اندازی اینجا بگذار؛ مثال: 'https://quiz-results.نام-شما.workers.dev'
 const WORKER_URL='https://site-api.realempraptor.workers.dev';
 function newId(){try{return crypto.randomUUID();}catch(e){return Array.from({length:32},()=>Math.floor(Math.random()*16).toString(16)).join('');}}
@@ -51,32 +49,234 @@ const intro=$('#intro'),quiz=$('#quiz'),result=$('#result');
 function faNum(n){return String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);}
 function render(){const item=QUESTIONS[current];$('#qCount').textContent=`پرسش ${faNum(current+1)} از ${faNum(QUESTIONS.length)}`;$('#axisTag').textContent=AXIS[item.axis];$('#questionText').textContent=item.q;$('#progressText').textContent=faNum(Math.round(current/QUESTIONS.length*100))+'٪';$('#progressFill').style.width=(current/QUESTIONS.length*100)+'%';document.querySelector('.progress-track').setAttribute('aria-valuenow',current);
 const box=$('#options');box.innerHTML='';order[current].forEach((i,pos)=>{const text=item.opts[i];const b=document.createElement('button');b.type='button';b.className='option'+(answers[current]===i?' selected':'');b.setAttribute('aria-pressed',answers[current]===i?'true':'false');const letter=document.createElement('span');letter.className='letter';letter.textContent=LETTERS[pos];const label=document.createElement('span');label.textContent=text;b.append(letter,label);b.addEventListener('click',()=>{answers[current]=i;render();});box.appendChild(b);});$('#prevBtn').disabled=current===0;$('#nextBtn').textContent=current===QUESTIONS.length-1?'پایان و مشاهده نتیجه':'بعدی';$('#nextBtn').disabled=answers[current]===null;save();}
-$('#startBtn').addEventListener('click',async()=>{const input=$('#studentName');student=input.value.trim();if(!student){input.focus();input.setCustomValidity('لطفاً نام خود را وارد کنید.');input.reportValidity();input.addEventListener('input',()=>input.setCustomValidity(''),{once:true});return;}
-if(WORKER_URL){const btn=$('#startBtn'),input=$('#studentName');btn.disabled=true;try{const r=await fetch(WORKER_URL.replace(/\/+$/,'')+'/check?name='+encodeURIComponent(student));const j=await r.json();if(j.taken){btn.disabled=false;input.focus();input.setCustomValidity('این نام قبلاً آزمون را ثبت کرده است. هر نام فقط یک بار می‌تواند شرکت کند.');input.reportValidity();input.addEventListener('input',()=>input.setCustomValidity(''),{once:true});return;}}catch(e){}btn.disabled=false;}
-intro.style.display='none';quiz.style.display='block';render();window.scrollTo({top:0,behavior:'smooth'});});
+$('#startBtn').addEventListener('click',async()=>{
+  const input=$('#studentName');
+  student=input.value.trim();
+
+  if(!student){
+    input.focus();
+    input.setCustomValidity('لطفاً نام و نام خانوادگی را وارد کنید.');
+    input.reportValidity();
+    input.addEventListener('input',()=>input.setCustomValidity(''),{once:true});
+    return;
+  }
+
+  const btn=$('#startBtn');
+  btn.disabled=true;
+
+  try{
+    const response=await fetch(
+      WORKER_URL.replace(/\/+$/,'')+'/check?name='+encodeURIComponent(student)
+    );
+    const data=await response.json();
+
+    if(!response.ok){
+      if(data.error==='invalid_name'){
+        input.setCustomValidity('نام باید حداقل شامل دو بخش باشد.');
+        input.reportValidity();
+        input.addEventListener('input',()=>input.setCustomValidity(''),{once:true});
+      }else{
+        toast('بررسی نام انجام نشد. اتصال اینترنت را بررسی و دوباره تلاش کنید.');
+      }
+      btn.disabled=false;
+      return;
+    }
+
+    if(data.taken){
+      input.setCustomValidity('این نام قبلاً آزمون را ثبت کرده است. هر نام فقط یک بار می‌تواند شرکت کند.');
+      input.reportValidity();
+      input.addEventListener('input',()=>input.setCustomValidity(''),{once:true});
+      btn.disabled=false;
+      return;
+    }
+  }catch(error){
+    toast('ارتباط با سرور برقرار نشد؛ شروع آزمون ممکن نیست. دوباره تلاش کنید.');
+    btn.disabled=false;
+    return;
+  }
+
+  btn.disabled=false;
+  intro.style.display='none';
+  quiz.style.display='block';
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
 $('#prevBtn').addEventListener('click',()=>{if(current>0){current--;render();}});
 $('#nextBtn').addEventListener('click',()=>{if(answers[current]===null)return;if(current<QUESTIONS.length-1){current++;render();window.scrollTo({top:0,behavior:'smooth'});}else finish();});
-function finish(){const unanswered=answers.filter(x=>x===null).length;if(unanswered){const first=answers.indexOf(null);current=first;render();toast(`پرسش ${faNum(first+1)} هنوز پاسخ داده نشده است.`);return;}const score=answers.reduce((n,a,i)=>n+(a===QUESTIONS[i].ans?1:0),0);const perAxis={1:{right:0,total:0},2:{right:0,total:0},3:{right:0,total:0},4:{right:0,total:0}};QUESTIONS.forEach((q,i)=>{perAxis[q.axis].total++;if(answers[i]===q.ans)perAxis[q.axis].right++;});
-const lines=[`گزارش آزمون «چهل سال ، چهل سوال»`,`نام دانش‌آموز: ${student}`,`امتیاز: ${faNum(score)} از ${faNum(40)} (${faNum(Math.round(score/40*100))}٪)`,`محور اول ـ استکبارستیزی: ${faNum(perAxis[1].right)} از ${faNum(10)}`,`محور دوم ـ یادمان شهدا: ${faNum(perAxis[2].right)} از ${faNum(10)}`,`محور سوم ـ پیشرفت علمی و فناوری: ${faNum(perAxis[3].right)} از ${faNum(15)}`,`محور چهارم ـ سواد رسانه‌ای: ${faNum(perAxis[4].right)} از ${faNum(5)}`,``,`جزئیات پاسخ‌ها:`];QUESTIONS.forEach((q,i)=>{const chosen=answers[i],mark=chosen===q.ans?'✓':'✗';lines.push(`${faNum(i+1)}. ${mark} ${q.q}`,`   پاسخ من: ${L(i,chosen)}) ${q.opts[chosen]}${chosen!==q.ans?` | پاسخ صحیح: ${L(i,q.ans)}) ${q.opts[q.ans]}`:''}`);});
-quiz.style.display='none';result.style.display='block';result.innerHTML='';const top=document.createElement('div');top.className='result-top';top.innerHTML=`<div class="medal">${score>=32?'🏅':'✦'}</div><div class="score">${faNum(score)}<span style="font-size:.42em;color:#afbdcd"> / ۴۰</span></div><h2>آفرین، ${escapeHTML(student)}!</h2><p>آزمون را به پایان رساندی. نتیجه‌ات آماده است.</p>`;result.appendChild(top);const st=document.createElement('div');st.id='sendStatus';st.style.cssText='text-align:center;margin:0 0 16px;font-size:14px;color:#afbdcd';result.appendChild(st);
-const stats=document.createElement('div');stats.className='stats';[[perAxis[1].right,10,'استکبارستیزی'],[perAxis[2].right,10,'یادمان شهدا'],[perAxis[3].right,15,'پیشرفت علمی'],[perAxis[4].right,5,'سواد رسانه‌ای']].forEach(x=>{const d=document.createElement('div');d.className='stat';d.innerHTML=`<b>${faNum(x[0])} / ${faNum(x[1])}</b><span>${x[2]}</span>`;stats.appendChild(d);});result.appendChild(stats);
-const review=document.createElement('div');review.className='review';review.innerHTML='<h3>مرور پاسخ‌ها</h3>';const list=document.createElement('div');list.className='review-list';QUESTIONS.forEach((q,i)=>{const ok=answers[i]===q.ans;const d=document.createElement('div');d.className='review-item '+(ok?'ok':'no');d.innerHTML=`<strong>${faNum(i+1)}. ${escapeHTML(q.q)}</strong><span>${ok?'پاسخ درست':'پاسخ شما: '+L(i,answers[i])+' — پاسخ صحیح: '+L(i,q.ans)} · ${AXIS[q.axis]}</span>`;list.appendChild(d);});review.appendChild(list);result.appendChild(review);
-const lab=document.createElement('div');lab.className='report-label';lab.textContent='گزارش آمادهٔ کپی برای ارسال در شاد یا ایتا';result.appendChild(lab);const area=document.createElement('textarea');area.className='report';area.id='reportText';area.readOnly=true;area.value=lines.join('\n');area.setAttribute('aria-label','گزارش نتیجه آزمون');result.appendChild(area);const actions=document.createElement('div');actions.className='result-actions';const copy=document.createElement('button');copy.className='btn btn-gold';copy.textContent='کپی گزارش';copy.onclick=copyReport;const again=document.createElement('button');again.className='btn btn-secondary';again.textContent='شروع دوباره';again.onclick=()=>location.reload();actions.append(copy,again);result.appendChild(actions);window.scrollTo({top:0,behavior:'smooth'});submitResult();}
+async function finish(){
+  const unanswered=answers.filter(value=>value===null).length;
+
+  if(unanswered){
+    const first=answers.indexOf(null);
+    current=first;
+    render();
+    toast(`پرسش ${faNum(first+1)} هنوز پاسخ داده نشده است.`);
+    return;
+  }
+
+  quiz.style.display='none';
+  result.style.display='block';
+  result.innerHTML='';
+
+  const top=document.createElement('div');
+  top.className='result-top';
+  top.innerHTML='<div class="medal">✦</div><h2>در حال ثبت آزمون</h2><p>نتیجه پس از تأیید سرور نمایش داده می‌شود.</p>';
+  result.appendChild(top);
+
+  const status=document.createElement('div');
+  status.id='sendStatus';
+  status.style.cssText='text-align:center;margin:0 0 16px;font-size:14px;color:#afbdcd';
+  status.textContent='در حال ارسال پاسخ‌ها…';
+  result.appendChild(status);
+
+  await submitResult();
+}
+
+function renderOfficialResult(data){
+  const score=Number(data.score);
+  const total=Number(data.total);
+  const axes=data.axes;
+
+  if(
+    !Number.isInteger(score) || score<0 ||
+    !Number.isInteger(total) || total!==QUESTIONS.length ||
+    !axes || typeof axes!=='object' ||
+    ![1,2,3,4].every(key=>Number.isInteger(Number(axes[key])) &&
+      Number(axes[key])>=0)
+  ){
+    throw new Error('invalid_server_result');
+  }
+
+  const wrong=total-score;
+  result.innerHTML='';
+
+  const top=document.createElement('div');
+  top.className='result-top';
+  top.innerHTML=`
+    <div class="medal">${score>=32?'🏅':'✦'}</div>
+    <div class="score">${faNum(score)}<span style="font-size:.42em;color:#afbdcd"> / ${faNum(total)}</span></div>
+    <h2>آفرین، ${escapeHTML(student)}!</h2>
+    <p>آزمون با موفقیت ثبت شد. نتیجه رسمی از سرور دریافت شده است.</p>`;
+  result.appendChild(top);
+
+  const stats=document.createElement('div');
+  stats.className='stats';
+
+  [
+    [score,total,'پاسخ صحیح'],
+    [wrong,total,'پاسخ غلط'],
+    [Number(axes[1]),10,'استکبارستیزی'],
+    [Number(axes[2]),10,'یادمان شهدا'],
+    [Number(axes[3]),15,'پیشرفت علمی'],
+    [Number(axes[4]),5,'سواد رسانه‌ای']
+  ].forEach(item=>{
+    const box=document.createElement('div');
+    box.className='stat';
+    const value=document.createElement('b');
+    value.textContent=`${faNum(item[0])} / ${faNum(item[1])}`;
+    const label=document.createElement('span');
+    label.textContent=item[2];
+    box.append(value,label);
+    stats.appendChild(box);
+  });
+
+  result.appendChild(stats);
+
+  const note=document.createElement('p');
+  note.className='fineprint';
+  note.style.textAlign='center';
+  note.textContent='جزئیات پاسخ‌ها و پاسخ‌های صحیح فقط در گزارش مسئول آزمون ثبت می‌شود.';
+  result.appendChild(note);
+
+  const actions=document.createElement('div');
+  actions.className='result-actions';
+  actions.style.justifyContent='center';
+
+  const again=document.createElement('button');
+  again.className='btn btn-secondary';
+  again.textContent='پایان';
+  again.onclick=()=>location.reload();
+
+  actions.appendChild(again);
+  result.appendChild(actions);
+}
+
 async function submitResult(){
-const st=$('#sendStatus');if(!st)return;
-if(!WORKER_URL){clearSave();st.remove();return;}
-const setMsg=(t,c,retry)=>{st.textContent=t;st.style.color=c||'#afbdcd';if(retry){const b=document.createElement('button');b.type='button';b.className='btn btn-secondary';b.style.cssText='padding:5px 14px;margin-inline-start:8px';b.textContent='تلاش دوباره';b.onclick=submitResult;st.append(' ',b);}};
-setMsg('در حال ارسال نتیجه…');
-const ctrl=new AbortController(),tm=setTimeout(()=>ctrl.abort(),15000);
-try{const r=await fetch(WORKER_URL.replace(/\/+$/,'')+'/submit',{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({id:attemptId,name:student,answers}),signal:ctrl.signal});clearTimeout(tm);
-if(r.ok){clearSave();setMsg('✓ نتیجه‌ات برای مسئول آزمون ارسال شد.','#54d6a0');return;}
-let j={};try{j=await r.json();}catch(e){}
-if(j.error==='name_taken'){clearSave();setMsg('این نام قبلاً آزمون را ثبت کرده است؛ نتیجه‌ی این تلاش ثبت نشد.','#ff7777');return;}
-if(j.error==='closed'){clearSave();setMsg('مهلت ثبت نتیجه به پایان رسیده است.','#ff7777');return;}
-setMsg('ثبت نتیجه انجام نشد.','#ff7777',true);
-}catch(e){clearTimeout(tm);setMsg('ارسال نتیجه انجام نشد؛ اینترنتت را بررسی کن.','#ff7777',true);}}
+  const status=$('#sendStatus');
+  if(!status)return;
+
+  const setMsg=(message,color,retry)=>{
+    status.innerHTML='';
+    status.style.color=color||'#afbdcd';
+    status.appendChild(document.createTextNode(message));
+
+    if(retry){
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='btn btn-secondary';
+      button.style.cssText='padding:5px 14px;margin-inline-start:8px';
+      button.textContent='تلاش دوباره';
+      button.onclick=submitResult;
+      status.append(' ',button);
+    }
+  };
+
+  setMsg('در حال ارسال پاسخ‌ها و محاسبه نتیجه در سرور…');
+
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),20000);
+
+  try{
+    const response=await fetch(
+      WORKER_URL.replace(/\/+$/,'')+'/submit',
+      {
+        method:'POST',
+        headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body:JSON.stringify({
+          id:attemptId,
+          name:student,
+          answers
+        }),
+        signal:controller.signal
+      }
+    );
+
+    clearTimeout(timeout);
+
+    let data={};
+    try{data=await response.json();}catch(error){}
+
+    if(response.ok && data.ok && !data.duplicate){
+      renderOfficialResult(data);
+      clearSave();
+      return;
+    }
+
+    if(data.error==='name_taken'){
+      clearSave();
+      setMsg('این نام قبلاً آزمون را ثبت کرده است؛ این تلاش ثبت نشد.','#ff7777');
+      return;
+    }
+
+    if(data.error==='closed'){
+      clearSave();
+      setMsg('مهلت ثبت نتیجه به پایان رسیده است.','#ff7777');
+      return;
+    }
+
+    if(response.ok && data.duplicate){
+      setMsg('این شناسه قبلاً ثبت شده است. برای دریافت نتیجه، با مسئول آزمون تماس بگیرید.','#ff7777');
+      return;
+    }
+
+    setMsg('ثبت نتیجه انجام نشد. پاسخ‌ها ذخیره شده‌اند؛ دوباره تلاش کنید.','#ff7777',true);
+  }catch(error){
+    clearTimeout(timeout);
+    setMsg('ارتباط با سرور برقرار نشد؛ پاسخ‌ها ذخیره شده‌اند. اینترنت را بررسی و دوباره تلاش کنید.','#ff7777',true);
+  }
+}
+
 function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-async function copyReport(){const area=$('#reportText');try{await navigator.clipboard.writeText(area.value);toast('گزارش کپی شد؛ آن را در شاد یا ایتا جای‌گذاری کنید.');}catch(e){area.focus();area.select();document.execCommand('copy');toast('گزارش انتخاب شد؛ در صورت نیاز آن را کپی کنید.');}}
 let toastTimer;function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2800);}
 
 (function restore(){try{const d=JSON.parse(localStorage.getItem(STORE_KEY)||'null');if(!d||!d.student)return;
